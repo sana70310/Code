@@ -1,0 +1,42 @@
+body{
+    background-color: black;
+}
+#backgroundDiv{
+    background-image: url(img/background.jpg);
+    background-size: cover;
+}
+#icon{
+    object-fit:cover;
+    width: 30%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    --animate-duration: 3s;
+    box-shadow: 0 0 20px rgb(100, 100, 100);
+    border-radius: 50%;
+}
+#toContents{
+    text-align: center;
+    margin-top: 3rem;
+}
+#toContents a{
+    font-size: 2rem;
+    padding: 0.2rem 0.3rem;
+    border: solid 2px white;
+    text-decoration: none;
+    color: white;
+}
+#toContents a:hover {
+    color: white;
+}
+
+svg{
+    margin-left: -10px;
+    color: rgb(100,100,100);
+    transition: 0.2s;
+}
+#toContents a:hover svg{
+    margin-left: 0px;
+    color: white;
+}

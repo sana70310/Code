@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/music.css" type="text/css">
+        <title>photo</title>
+    </head>
+    <body>
+        <header id="fixedHeader" style="z-index: 1;">
+            <nav>
+                <ul>
+                    <li><div id="menuIcon"><a href="contents.html"><img src="../img/icon.png"></a></div></li>
+                    <li><div><a href="about.html" class="Item"><span class="Item-Text">about</span></a></div></li>
+                    <li><div><a href="news.html" class="Item"><span class="Item-Text">news</span></a></div></li>
+                    <li><div><a href="photo.html" class="Item"><span class="Item-Text">photo</span></a></div></li>
+                    <li><div><a href="music.html"><span id="currentPage">music</span></a></div></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="photoTypeTab">
+            <ul id="tabUl">
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-option" viewBox="0 0 16 16">
+                     <path d="M1 2.5a.5.5 0 0 1 .5-.5h3.797a.5.5 0 0 1 .439.26L11 13h3.5a.5.5 0 0 1 0 1h-3.797a.5.5 0 0 1-.439-.26L5 3H1.5a.5.5 0 0 1-.5-.5zm10 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
+                </li>
+                <li><span id="tab1" class="tab" onclick="selectTab(this)">cinematic</span></li>
+                <li><span id="tab2" class="tab" onclick="selectTab(this)">emotional</span></li>
+            </ul>
+        </div>
+        <div id="thisContents">
+            <!--cinematic-->
+            <ul id="photoUl">
+                <li class="photoList">
+                    <div class="imgPart">
+                        <img id="index_1" src="../img/music/cinematic/index_1.jpeg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)">
+                    </div><!--
+                    --><div class="captionPart">
+                        <div class="captionGround">
+                            <div class="caption">
+                                暗い雰囲気から一気に明るくなるような曲が作りたいって気分とディズニーの曲をアレンジしたい気分が同時に押し寄せてきてできた曲です。
+                                <br>ラプンツェルの「輝く未来」のメロディーが出てきたりこなかったり......。
+                                <br>ジャケットはクリスマスシーズンのディズニーシーが元になっています。
+                            </div>
+                            <div class="sound">
+                                <iframe width="100%" height="130" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1185218128&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
+                                <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                                    <a href="https://soundcloud.com/user-553820549" title="Sana" target="_blank" style="color: #cccccc; text-decoration: none;">Sana</a> · <a href="https://soundcloud.com/user-553820549/cinematic1" title="I See The Dark And The Light" target="_blank" style="color: #cccccc; text-decoration: none;">I See The Dark And The Light</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="photoList">
+                    <div class="imgPart">
+                        <img id="index_2" src="../img/music/cinematic/index_2.jpeg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)">
+                    </div><!--
+                    --><div class="captionPart">
+                        <div class="captionGround">
+                            <div class="caption">
+                                映画のハッピーエンドをイメージして作りました。
+                                <br>ジャケットはいつかの空の写真。
+                            </div>
+                            <div class="sound">
+                                <iframe width="100%" height="130" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1185567025&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=true&visual=false"></iframe>
+                                <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                                    <a href="https://soundcloud.com/user-553820549" title="Sana" target="_blank" style="color: #cccccc; text-decoration: none;">Sana</a> · <a href="https://soundcloud.com/user-553820549/imaginery-end" title="Imaginery End" target="_blank" style="color: #cccccc; text-decoration: none;">Imaginery End</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="photoList">
+                    <div class="imgPart">
+                        <img id="index_3" src="../img/music/cinematic/index_3.jpeg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)">
+                    </div><!--
+                    --><div class="captionPart">
+                        <div class="captionGround">
+                            <div class="caption">
+                                シネマティックな雰囲気もりもりにしたかった気がします。
+                                <br>ジャケットはいつか撮った花たちの写真。
+                            </div>
+                            <div class="sound">
+                                <iframe width="100%" height="130" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1221121924&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
+                                <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                                    <a href="https://soundcloud.com/user-553820549" title="Sana" target="_blank" style="color: #cccccc; text-decoration: none;">Sana</a> · <a href="https://soundcloud.com/user-553820549/push-forward-darkness" title="Push Forward Darkness" target="_blank" style="color: #cccccc; text-decoration: none;">Push Forward Darkness</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="photoList">
+                    <div class="imgPart">
+                        <img id="index_4" src="../img/music/cinematic/index_4.jpeg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)">
+                    </div><!--
+                    --><div class="captionPart">
+                        <div class="captionGround">
+                            <div class="caption">
+                                曲もジャケットも我ながら気に入ってます。
+                                <br>壮大さの中にちょっとダーク感ありな曲に仕上げたつもりです。
+                                <br>ダークヒーローって言葉が似合うって言ってほしい！
+                                <br>ジャケットは実家から見える夕焼け小焼け。
+                            </div>
+                            <div class="sound">
+                                <iframe width="100%" height="130" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1221122848&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
+                                <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                                    <a href="https://soundcloud.com/user-553820549" title="Sana" target="_blank" style="color: #cccccc; text-decoration: none;">Sana</a> · <a href="https://soundcloud.com/user-553820549/overcome" title="Overcome" target="_blank" style="color: #cccccc; text-decoration: none;">Overcome</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="photoList">
+                    <div class="imgPart">
+                        <img id="index_5" src="../img/music/cinematic/index_5.jpeg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)">
+                    </div><!--
+                    --><div class="captionPart">
+                        <div class="captionGround">
+                            <div class="caption">
+                                物語冒頭、目的地へ向かう途中、市場で情報収集をしていると遠くにでっかいお城が見えてきた。
+                                <br>そんなイメージで作りました。
+                                <br>だれかこれでお話作ってください。
+                            </div>
+                            <div class="sound">
+                                <iframe width="100%" height="130" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1221123316&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
+                                <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                                    <a href="https://soundcloud.com/user-553820549" title="Sana" target="_blank" style="color: #cccccc; text-decoration: none;">Sana</a> · <a href="https://soundcloud.com/user-553820549/gathering" title="Gathering" target="_blank" style="color: #cccccc; text-decoration: none;">Gathering</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="photoList">
+                    <div class="imgPart">
+                        <img id="index_6" src="../img/music/cinematic/index_6.jpeg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)">
+                    </div><!--
+                    --><div class="captionPart">
+                        <div class="captionGround">
+                            <div class="caption">
+                                MARVELが好きです。
+                                <br>ストーリーやキャラクターもそうだけど物語を紐づけて展開する演出が魅力的です。
+                                <br>今回は、ヒーロー映画のイメージが強いアベンジャーズのテーマをちょっとダークにアレンジしてみました。
+                            </div>
+                            <div class="sound">
+                                <iframe width="100%" height="130" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1221124033&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
+                                <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                                    <a href="https://soundcloud.com/user-553820549" title="Sana" target="_blank" style="color: #cccccc; text-decoration: none;">Sana</a> · <a href="https://soundcloud.com/user-553820549/dark-avengers" title="Dark Avengers" target="_blank" style="color: #cccccc; text-decoration: none;">Dark Avengers</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--emotional-->
+                <li class="photoList">
+                    <div class="imgPart">
+                        <img id="index_1" src="../img/music/emotional/index_1.jpeg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)">
+                    </div><!--
+                    --><div class="captionPart">
+                        <div class="captionGround">
+                            <div class="caption">
+                                感動する物語にはいつも音楽がついています。
+                                <br>曲を聞くだけで頭の中に映像が浮かび上がる。
+                                <br>そんな音楽が好きだと気づいてからハマってしまいました。
+                            </div>
+                            <div class="sound">
+                                <iframe width="100%" height="130" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1221124522&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
+                                <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                                    <a href="https://soundcloud.com/user-553820549" title="Sana" target="_blank" style="color: #cccccc; text-decoration: none;">Sana</a> · <a href="https://soundcloud.com/user-553820549/dispel-the-bad-image" title="Dispel The Bad Image" target="_blank" style="color: #cccccc; text-decoration: none;">Dispel The Bad Image</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="photoList">
+                    <div class="imgPart">
+                        <img id="index_2" src="../img/music/emotional/index_2.jpeg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)">
+                    </div><!--
+                    --><div class="captionPart">
+                        <div class="captionGround">
+                            <div class="caption">
+
+                            </div>
+                            <div class="sound">
+                                <iframe width="100%" height="130" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1221125176&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
+                                <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                                    <a href="https://soundcloud.com/user-553820549" title="Sana" target="_blank" style="color: #cccccc; text-decoration: none;">Sana</a> · <a href="https://soundcloud.com/user-553820549/past-and-preparedness" title="Past And Preparedness" target="_blank" style="color: #cccccc; text-decoration: none;">Past And Preparedness</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="photoList">
+                    <div class="imgPart">
+                        <img id="index_3" src="../img/music/emotional/index_3.jpeg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)">
+                    </div><!--
+                    --><div class="captionPart">
+                        <div class="captionGround">
+                            <div class="caption">
+
+                            </div>
+                            <div class="sound">
+                                <iframe width="100%" height="130" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1221127519&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
+                                <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                                    <a href="https://soundcloud.com/user-553820549" title="Sana" target="_blank" style="color: #cccccc; text-decoration: none;">Sana</a> · <a href="https://soundcloud.com/user-553820549/rewarded" title="Rewarded" target="_blank" style="color: #cccccc; text-decoration: none;">Rewarded</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--ポップアップ-->
+        <div id="popUp">
+            <svg id="closeSVG" onclick="closePopUp()" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 15 15">
+                <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+            </svg>
+            <svg id="prevSVG" onclick="prevPhoto()" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-chevron-compact-left" viewBox="0 0 15 15">
+                <path fill-rule="evenodd" d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223z"/>
+            </svg>
+            <svg id="nextSVG" onclick="nextPhoto()" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-chevron-compact-right" viewBox="0 0 15 15">
+                <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"/>
+            </svg>
+            <div>
+                <iframe id="popUpVideo" src="https://www.youtube.com/embed/lLjHmMWR9F4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="../js/music.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <script async custom-element="amp-soundcloud" src="https://cdn.ampproject.org/v0/amp-soundcloud-0.1.js"></script>
+    </body>
+</html>

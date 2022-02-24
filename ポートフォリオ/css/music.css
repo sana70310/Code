@@ -1,0 +1,240 @@
+/*共通*/
+body{
+    font-family: serif;
+    background-color: #bbc;
+}
+/*ヘッダー*/
+#fixedHeader{
+    position: fixed;
+}
+#fixedHeader nav ul{
+    display: flex;
+    flex-wrap:wrap;
+    list-style: none;
+    color: white;
+    padding: 0px;
+}
+#fixedHeader ul{
+    white-space: nowrap;
+}
+#menuIcon img{
+    width: 3rem;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+  #menuIcon img:hover{
+    box-shadow: 0 0 10px rgb(60, 60, 60);
+    transform: scale(1.05);
+}
+li div{
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    color: white;
+}
+.Item{
+    text-decoration: none;
+    color: white;
+    /*font-size: 24px;*/
+}
+.Item-Text{
+    position: relative;
+    z-index: 1;
+}
+.Item-Text:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;/*テキストからの距離*/
+    width: 0%;/*初期状態では下線非表示*/
+    height: 1px;/*下線の高さ*/
+    background: white;/*下線の色*/
+    z-index: -1;
+    transition: all 0.2s;/*アニメーション速度*/
+}
+.Item:hover .Item-Text:after{
+    width: 100%;/*hover時に表示*/
+}
+#currentPage{
+    color: black;
+    transition: all 0.3s;
+}
+#currentPage:hover{
+    color: white;
+}
+/*タブ*/
+.tab{
+    background-color: black;
+    padding: 0.5rem 3rem;
+    transition: 0.2s;
+}
+.tab:hover{
+    background-color: aliceblue;
+    color: black;
+    transform: rotate(45deg);
+}
+#photoTypeTab ul{
+    display: flex;
+    flex-wrap:wrap;
+    list-style: none;
+    color: white;
+    padding: 0px;
+}
+
+/*コンテンツ*/
+#thisContents{
+    background-color: #bbc;
+}
+/*コンテンツ内ulタグ*/
+#photoUl{
+    box-shadow: 0 0 30px rgb(60, 60, 60);
+    list-style: none;
+    padding: 0px;
+}
+/*コンテンツ内liタグ*/
+.photoList{
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    /*overflow: hidden;*/
+}
+.photoList div{
+    vertical-align: top;
+    display: inline-block;
+}
+/*写真配置div*/
+.imgPart{
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    padding: 0px;
+}
+/*キャプションdiv*/
+.captionPart{
+    width: 70%;
+    height: 100%;
+    padding: 5%;
+}
+.captionGround{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50,50,50,0.3);
+    padding: 0px;
+    box-shadow: 0 0 10px rgb(50,50,50);
+}
+.caption{
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    padding: 1rem;
+    color: rgb(200,200,200);
+}
+.sound{
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
+/*コンテンツ内imgタグ*/
+.imgPart img{
+    /*max-width:100%;
+    max-height: 100%;*/
+    object-fit:cover;
+    width: 200px;
+    height: 200px;
+    outline: 2px solid rgb(0, 0, 0);
+    /*margin: -10px;*/
+    /*box-shadow: 左右の向きpx  上下の向きpx ぼかしpx 広がりpx 色 内側指定;
+    例)box-shadow: 2px 2px 4px -2px gray inset;
+    box-shadow: 0 0 8px gray;*/
+    /*アニメ―ション*/
+    transition: 0.1s;
+}
+.photoList img:hover{
+    outline: 4px solid rgb(0, 0, 0);
+    transform: scale(1.02);
+}
+/*ポップアップ*/
+@keyframes showPopUp {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.showPopUp{
+    animation-name: showPopUp;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+#popUp{
+    opacity: 0;
+    display: none;
+    z-index: 2;
+    position: fixed;
+    top: 8%;
+    left: 10%;
+    width: 80%;
+    height: 84%;
+    background-color: rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+#popUp div{
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    height: 90%;
+    width: 70%;
+    background-color: rgba(0, 0, 0, 0);
+}
+#popUp div{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                            supported by Chrome and Opera */
+}
+/*ポップアップ内写真*/
+#popUpVideo{
+    width: 100%;
+    height: 100%;
+}
+/*ポップアップ内SVG*/
+#closeSVG{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    color: aliceblue;
+    transition: 0.2s;
+}
+#closeSVG:hover{
+    transform: rotate(90deg);
+}
+#prevSVG{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    color: aliceblue;
+    transition: 0.2s;
+}
+#prevSVG:hover{
+    transform: scale(2,0.8);
+}
+#nextSVG{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    color: aliceblue;
+    transition: 0.2s;
+}
+#nextSVG:hover{
+    transform: scale(2,0.8);
+}

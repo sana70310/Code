@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/photo.css" type="text/css">
+        <title>photo</title>
+    </head>
+    <body>
+        <header id="fixedHeader" style="z-index: 1;">
+            <nav>
+                <ul>
+                    <li><div id="menuIcon"><a href="contents.html"><img src="../img/icon.png"></a></div></li>
+                    <li><div><a href="about.html" class="Item"><span class="Item-Text">about</span></a></div></li>
+                    <li><div><a href="news.html" class="Item"><span class="Item-Text">news</span></a></div></li>
+                    <li><div><a href="photo.html"><span id="currentPage">photo</span></a></div></li>
+                    <li><div><a href="music.html" class="Item"><span class="Item-Text">music</span></a></div></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="photoTypeTab">
+            <ul id="tabUl">
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-option" viewBox="0 0 16 16">
+                     <path d="M1 2.5a.5.5 0 0 1 .5-.5h3.797a.5.5 0 0 1 .439.26L11 13h3.5a.5.5 0 0 1 0 1h-3.797a.5.5 0 0 1-.439-.26L5 3H1.5a.5.5 0 0 1-.5-.5zm10 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
+                </li>
+                <li><span id="tab1" class="tab" onclick="selectTab(this)">nature</span></li>
+                <li><span id="tab2" class="tab" onclick="selectTab(this)">portrait</span></li>
+                <li><span id="tab3" class="tab" onclick="selectTab(this)">disney</span></li>
+            </ul>
+        </div>
+        <div id="thisContents">
+            <ul id="photoUl">
+                <li class="photoList"><img id="index_1" src="../img/photo/nature/index_1.jpg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)"></li>
+                <li class="photoList"><img id="index_2" src="../img/photo/nature/index_2.jpg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)"></li>
+                <li class="photoList"><img id="index_3" src="../img/photo/nature/index_3.jpg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)"></li>
+                <li class="photoList"><img id="index_4" src="../img/photo/nature/index_4.jpg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)"></li>
+                <li class="photoList"><img id="index_5" src="../img/photo/nature/index_5.jpg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)"></li>
+                <li class="photoList"><img id="index_6" src="../img/photo/nature/index_6.jpg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)"></li>
+                <li class="photoList"><img id="index_7" src="../img/photo/nature/index_7.jpg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)"></li>
+                <li class="photoList"><img id="index_8" src="../img/photo/nature/index_8.jpg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)"></li>
+                <li class="photoList"><img id="index_9" src="../img/photo/nature/index_9.jpg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)"></li>
+                <li class="photoList"><img id="index_10" src="../img/photo/nature/index_10.jpg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)"></li>
+                <li class="photoList"><img id="index_11" src="../img/photo/nature/index_11.jpg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)"></li>
+                <li class="photoList"><img id="index_12" src="../img/photo/nature/index_12.jpg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)"></li>
+                <li class="photoList"><img id="index_13" src="../img/photo/nature/index_13.jpg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)"></li>
+                <li class="photoList"><img id="index_14" src="../img/photo/nature/index_14.jpg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)"></li>
+                <li class="photoList"><img id="index_15" src="../img/photo/nature/index_15.jpg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)"></li>
+                <li class="photoList"><img id="index_16" src="../img/photo/nature/index_16.jpg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)"></li>
+                <li class="photoList"><img id="index_17" src="../img/photo/nature/index_17.jpg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)"></li>
+                <li class="photoList"><img id="index_18" src="../img/photo/nature/index_18.jpg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)"></li>
+                <li class="photoList"><img id="index_19" src="../img/photo/nature/index_19.jpg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)"></li>
+                <li class="photoList"><img id="index_20" src="../img/photo/nature/index_20.jpg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)"></li>
+                <li class="photoList"><img id="index_21" src="../img/photo/nature/index_21.jpg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)"></li>
+                <li class="photoList"><img id="index_22" src="../img/photo/nature/index_22.jpg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)"></li>
+                <li class="photoList"><img id="index_23" src="../img/photo/nature/index_23.jpg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)"></li>
+                <li class="photoList"><img id="index_24" src="../img/photo/nature/index_24.jpg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)"></li>
+                <li class="photoList"><img id="index_25" src="../img/photo/nature/index_25.jpg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)"></li>
+                <li class="photoList"><img id="index_26" src="../img/photo/nature/index_26.jpg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)"></li>
+                <li class="photoList"><img id="index_27" src="../img/photo/nature/index_27.jpg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)"></li>
+                <li class="photoList"><img id="index_28" src="../img/photo/nature/index_28.jpg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)"></li>
+                <li class="photoList"><img id="index_29" src="../img/photo/nature/index_29.jpg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)"></li>
+                <li class="photoList"><img id="index_30" src="../img/photo/nature/index_30.jpg" alt="写真" onclick="openPopUp(this)" onmousedown="mouseDownImg(this)" onmouseup="mouseUpImg(this)"></li>
+            </ul>
+        </div>
+        <!--ポップアップ-->
+        <div id="popUp">
+            <svg id="closeSVG" onclick="closePopUp()" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 15 15">
+                <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+            </svg>
+            <svg id="prevSVG" onclick="prevPhoto()" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-chevron-compact-left" viewBox="0 0 15 15">
+                <path fill-rule="evenodd" d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223z"/>
+            </svg>
+            <svg id="nextSVG" onclick="nextPhoto()" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-chevron-compact-right" viewBox="0 0 15 15">
+                <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"/>
+            </svg>
+            <div>
+                <img id="popUpImg" src="../img/photo/nature/index_1.jpg" alt="写真">
+            </div>
+        </div>
+
+        <script type="text/javascript" src="../js/photo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    </body>
+</html>
