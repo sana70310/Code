@@ -13,95 +13,93 @@ var emotionalURL = ["lq_-gH9hSgc","0448oeDDTUU","TOQN3r_xpUY"];
 var typeList = [cinematicURL,emotionalURL];
 var currentTypeIndex = 0; //typeListのインデックス
 
-//ロード時処理
-window.onload = function(){
-  //スコープ内変数
-    const scrollBarWidth = window.outerWidth - document.body.offsetWidth; //スクロールバーの幅
-    const screenWidth = screen.width - scrollBarWidth; //スクリーンの幅
+//スコープ内変数
+  const scrollBarWidth = window.outerWidth - document.body.offsetWidth; //スクロールバーの幅
+  const screenWidth = screen.width - scrollBarWidth; //スクリーンの幅
 
-  //タブの表示位置設定
-    //padding-top, padding-left
-    const headerHeight = document.getElementById("fixedHeader").offsetHeight; //ヘッダーの高さ
-    const photoTypeTabLi = photoTypeTab.firstElementChild.children; //タブ内のLi
-    let tabWidth = 0;
-    for(let i=1; i<photoTypeTabLi.length; i++){
-      tabWidth += photoTypeTabLi[i].offsetWidth;
-    }
+//タブの表示位置設定
+  //padding-top, padding-left
+  const headerHeight = document.getElementById("fixedHeader").offsetHeight; //ヘッダーの高さ
+  const photoTypeTabLi = photoTypeTab.firstElementChild.children; //タブ内のLi
+  let tabWidth = 0;
+  for(let i=1; i<photoTypeTabLi.length; i++){
+    tabWidth += photoTypeTabLi[i].offsetWidth;
+  }
 
-    photoTypeTab.style.paddingTop = headerHeight + "px";
-    photoTypeTab.style.paddingLeft = (screenWidth - tabWidth)/2 - photoTypeTabLi[0].offsetWidth + "px";
+  photoTypeTab.style.paddingTop = headerHeight + "px";
+  photoTypeTab.style.paddingLeft = (screenWidth - tabWidth)/2 - photoTypeTabLi[0].offsetWidth + "px";
 
-  //liタグの表示サイズ設定(width, height)
-    //写真の列数
-    let photoImgCol = 5;
-    //1枚の幅、高さ
-    let photoImgWidth = screenWidth / (photoImgCol+1);
-    //小さすぎた場合、4列に設定
-    if(photoImgWidth<160){
-        photoImgCol = 4;
-        photoImgWidth = screenWidth / (photoImgCol+1);
-    }
-    //liタグ全てに適用
-    for(let i=0; i<photoLi.length; i++){
-        photoLi[i].style.width = photoImgWidth*photoImgCol + "px";
-        photoLi[i].style.height = photoImgWidth*photoImgCol*0.5 + "px";
-    }
-    //imgタグ
-    const photoLiHeight = photoLi[0].firstElementChild.offsetHeight;
-    for(let i=0; i<photoLi.length; i++){
-      photoLi[i].firstElementChild.firstElementChild.style.width = photoImgWidth +"px";
-      photoLi[i].firstElementChild.firstElementChild.style.height = photoImgWidth +"px";
-      photoLi[i].firstElementChild.style.paddingTop = (photoLiHeight-photoImgWidth)/2 +"px";
-    }
-  //ulタグの表示サイズ・位置設定(width, left, margin-right)
-    //photoUl.style.width = photoLiWidth*photoLiCol + (screenWidth - photoLiWidth*photoLiCol)/2 - scrollBarWidth + "px"; //ウィンドウサイズを小さくしたときにリストの右側に余白を表示するため
-    photoUl.style.width = photoImgWidth*photoImgCol + "px";
-    photoUl.style.marginLeft = (screenWidth - photoImgWidth*photoImgCol)/2 + "px";
+//liタグの表示サイズ設定(width, height)
+  //写真の列数
+  let photoImgCol = 5;
+  //1枚の幅、高さ
+  let photoImgWidth = screenWidth / (photoImgCol+1);
+  //小さすぎた場合、4列に設定
+  if(photoImgWidth<160){
+      photoImgCol = 4;
+      photoImgWidth = screenWidth / (photoImgCol+1);
+  }
+  //liタグ全てに適用
+  for(let i=0; i<photoLi.length; i++){
+      photoLi[i].style.width = photoImgWidth*photoImgCol + "px";
+      photoLi[i].style.height = photoImgWidth*photoImgCol*0.5 + "px";
+  }
+  //imgタグ
+  const photoLiHeight = photoLi[0].firstElementChild.offsetHeight;
+  for(let i=0; i<photoLi.length; i++){
+    photoLi[i].firstElementChild.firstElementChild.style.width = photoImgWidth +"px";
+    photoLi[i].firstElementChild.firstElementChild.style.height = photoImgWidth +"px";
+    photoLi[i].firstElementChild.style.paddingTop = (photoLiHeight-photoImgWidth)/2 +"px";
+  }
+//ulタグの表示サイズ・位置設定(width, left, margin-right)
+  //photoUl.style.width = photoLiWidth*photoLiCol + (screenWidth - photoLiWidth*photoLiCol)/2 - scrollBarWidth + "px"; //ウィンドウサイズを小さくしたときにリストの右側に余白を表示するため
+  photoUl.style.width = photoImgWidth*photoImgCol + "px";
+  photoUl.style.marginLeft = (screenWidth - photoImgWidth*photoImgCol)/2 + "px";
+
+//コンテンツの幅
+document.getElementById("thisContents").style.width = screenWidth;
+
+//開始タブ
+var queryString = window.location.search;
+var queryObject = new Object();
+let listLength = cinematicURL.length;
+if(queryString){
+  queryString = queryString.substring(1);
+  var parameters = queryString.split('&');
+
+  for (var i = 0; i < parameters.length; i++) {
+    var element = parameters[i].split('=');
+
+    var paramName = decodeURIComponent(element[0]);
+    var paramValue = decodeURIComponent(element[1]);
+
+    queryObject[paramName] = paramValue;
+  }
   
-  //コンテンツの幅
-  document.getElementById("thisContents").style.width = screenWidth;
-
-  //開始タブ
-  var queryString = window.location.search;
-  var queryObject = new Object();
-  let listLength = cinematicURL.length;
-  if(queryString){
-    queryString = queryString.substring(1);
-    var parameters = queryString.split('&');
-
-    for (var i = 0; i < parameters.length; i++) {
-      var element = parameters[i].split('=');
-
-      var paramName = decodeURIComponent(element[0]);
-      var paramValue = decodeURIComponent(element[1]);
-
-      queryObject[paramName] = paramValue;
-    }
-    
-  }
-  if(queryObject.start!=null){
-    currentTypeIndex = parseInt(queryObject.start);
-  }
-  //タブに応じた表示設定
-  let bridgeIndex = 0;
-  let currentIndex = 0;
-  for(let i=0; i<typeList.length; i++){
-    bridgeIndex += typeList[i].length;
-    if(i==currentTypeIndex){
-      while(currentIndex<bridgeIndex){
-        photoLi[currentIndex].style.display = "block";
-        currentIndex++;
-      }
-    }else{
-      while(currentIndex<bridgeIndex){
-        photoLi[currentIndex].style.display = "none";
-        currentIndex++;
-      }
-    }
-  }
-  //タブの表示設定
-  tabLi[currentTypeIndex+1].firstChild.style.textDecoration = "underline solid";
 }
+if(queryObject.start!=null){
+  currentTypeIndex = parseInt(queryObject.start);
+}
+//タブに応じた表示設定
+let bridgeIndex = 0;
+let currentIndex = 0;
+for(let i=0; i<typeList.length; i++){
+  bridgeIndex += typeList[i].length;
+  if(i==currentTypeIndex){
+    while(currentIndex<bridgeIndex){
+      photoLi[currentIndex].style.display = "block";
+      currentIndex++;
+    }
+  }else{
+    while(currentIndex<bridgeIndex){
+      photoLi[currentIndex].style.display = "none";
+      currentIndex++;
+    }
+  }
+}
+//タブの表示設定
+tabLi[currentTypeIndex+1].firstChild.style.textDecoration = "underline solid";
+
 //タブクリック
 function selectTab(selectedTab){
   //押下されたタブを特定
@@ -175,4 +173,13 @@ function nextPhoto(){
     currentVideoIndex = 0;
   }
   popUpVideo.src = "https://www.youtube.com/embed/"+typeList[currentTypeIndex][currentVideoIndex];
+}
+
+//ロード終了時処理
+var loadground = document.getElementById("loadground");
+window.onload = function(){
+    loadground.style.opacity = "0";
+    setTimeout(function(){
+        loadground.style.display = "none";
+    }, 300);
 }
