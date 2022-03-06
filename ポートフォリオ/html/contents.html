@@ -38,7 +38,8 @@
             </svg>
             <div id="loadgroundState">loading...</div>
         </div>
-
+        <!-- 背景アニメ―ション -->
+        <div id="particles-js"></div>
         <!--ヘッダー-->
         <header id="fixedHeader">
             <nav>
@@ -55,8 +56,12 @@
         <div id="contents">
             <!--FROM-->
             <!--ABOUT-->
+            <a id="aboutTitle" class="titlePart" href="about.html">about</a>
             <div id="aboutArea" class="areaContainer">
-                ～テキスト～
+                <div id="aboutCaption">
+                    キャプション
+                    <br>自己紹介など
+                </div>
                 <div id="toAbout" class="photoCaptionDiv">
                     <a href="about.html">
                         <span>more</span>
@@ -67,12 +72,13 @@
                 </div>
             </div>
             <!--NEWS-->
-            <div id="newsArea" class="row areaContainer">
+            <a id="newsTitle" class="titlePart_alter" href="news.html">news</a>
+            <div id="newsArea" class="row areaContainer_alter">
                 <!--news_1-->
                 <div id="news_1" class="col-4 photoType">
-                    <div class="photoImgDiv"><img src="../img/news/news_1/index_1.jpg"></div>
+                    <div class="photoImgDiv"><img src="../img/news/index_1.jpg"></div>
                     <div class="photoCaptionDiv">
-                        <a href="news.html?start=1">
+                        <a href="news.html#index_1">
                             <span>news1</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="bi bi-arrow-bar-right" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8zm-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5z"/>
@@ -86,7 +92,7 @@
                 <!--news_2-->
                 <div id="news_2" class="col-4 photoType">
                     <div class="photoCaptionDiv">
-                        <a href="news.html?start=2">
+                        <a href="news.html#index_2">
                             <span>news2</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="bi bi-arrow-bar-right" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8zm-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5z"/>
@@ -96,13 +102,13 @@
                             キャプション<br>キャプション
                         </div>
                     </div>
-                    <div class="photoImgDiv"><img src="../img/news/news_2/index_1.jpg"></div>
+                    <div class="photoImgDiv"><img src="../img/news/index_2.jpg"></div>
                 </div>
                 <!--news_3-->
                 <div id="news_3" class="col-4 photoType">
-                    <div class="photoImgDiv"><img src="../img/news/news_3/index_1.jpg"></div>
+                    <div class="photoImgDiv"><img src="../img/news/index_3.jpg"></div>
                     <div class="photoCaptionDiv">
-                        <a href="news.html?start=3">
+                        <a href="news.html#index_3">
                             <span>news3</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="bi bi-arrow-bar-right" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8zm-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5z"/>
@@ -115,6 +121,7 @@
                 </div>
             </div>
             <!--PHOTO-->
+            <a id="photoTitle" class="titlePart" href="photo.html">photo</a>
             <div id="photoArea" class="row areaContainer">
                 <!--nature-->
                 <div id="nature" class="col-4 photoType">
@@ -164,7 +171,8 @@
                 </div>
             </div>
             <!--MUSIC-->
-            <div id="musicArea" class="row areaContainer">
+            <a id="musicTitle" class="titlePart_alter" href="music.html">music</a>
+            <div id="musicArea" class="row areaContainer_alter">
                 <!--cinematic-->
                 <div id="cinematic" class="col-6 photoType">
                     <div class="photoImgDiv"><img src="../img/music/cinematic/index_1.jpeg"></div>
@@ -208,13 +216,15 @@
             </div>
             <div class="col-3">
                 INSTAGRAM_<br>
-                <a href="link.html" target="_blank" style="color: white;">@〇〇〇〇〇〇</a>
+                <a href="https://www.instagram.com/saney_instant/" target="_blank" style="color: white;">@saney_instant</a>
             </div>
             <div class="col-3"></div>
             <div class="col-3"></div>
         </div>
 
         <script type="text/javascript" src="../js/contents.js"></script>
+        <script src="../particles.js-master/particles.min.js"></script>
+        <script src="../particles.js-master/app.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     </body>
 </html>

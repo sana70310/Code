@@ -1,7 +1,9 @@
 /*共通*/
 body{
     font-family: serif;
-    background-color: #cca;
+    /* background-color: #cca; */
+    /* background-color: #e6cde3; */
+    background-color: #debecc;
 }
 /*ロード画面*/
 #loadground{
@@ -12,6 +14,7 @@ body{
   position: fixed;
   transition: 0.3s;
   text-align: center;
+  cursor: wait;
 }
 #_x32_{
   margin-top: 35vh;
@@ -48,9 +51,19 @@ body{
     opacity: 0;
   }
 }
+/*背景アニメ―ション*/
+#particles-js{
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  z-index: -1;
+}
 /*ヘッダー*/
 #fixedHeader{
     position: fixed;
+    z-index: 1;
 }
 #fixedHeader nav ul{
     display: flex;
@@ -67,9 +80,9 @@ body{
     border-radius: 50%;
     transition: 0.3s;
 }
-  #menuIcon img:hover{
-    box-shadow: 0 0 10px rgb(60, 60, 60);
-    transform: scale(1.05);
+#menuIcon img:hover{
+    box-shadow: 0 0 20px rgb(60, 60, 60);
+  /* transform: scale(1.05); */
 }
 li div{
     padding: 0.5rem 1rem 0.5rem 1rem;
@@ -131,36 +144,39 @@ a:hover {
 }
 
 /*コンテンツ*/
-#thisContents{
-    background-color: #cca;
-}
 /*コンテンツ内ulタグ*/
-#photoUl{
+#newsUl{
     box-shadow: 0 0 30px rgb(60, 60, 60);
     list-style: none;
     padding: 0px;
 }
 /*コンテンツ内liタグ*/
-.photoList{
+.newsList{
     width: 200px;
     margin: 0;
     padding: 0;
     /*overflow: hidden;*/
 }
-.photoList div{
+.newsList div{
     vertical-align: top;
     display: inline-block;
 }
 /*写真配置div*/
 .imgPart{
-    width: 30%;
+    width: 40%;
     height: 100%;
+    padding: 5% 0% 5% 5%;
     text-align: center;
-    padding: 0px;
+}
+.imgPart_alt{
+    width: 40%;
+    height: 100%;
+    padding: 5% 5% 5% 0%;
+    text-align: center;
 }
 /*キャプションdiv*/
 .captionPart{
-    width: 70%;
+    width: 60%;
     height: 100%;
     padding: 5%;
 }
@@ -168,7 +184,6 @@ a:hover {
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: rgba(50,50,50,0.3);
     padding: 0px;
     box-shadow: 0 0 10px rgb(50,50,50);
 }
@@ -177,20 +192,15 @@ a:hover {
     width: 100%;
     top: 0px;
     padding: 1rem;
-    color: rgb(200,200,200);
+    color: rgb(0,0,0);
 }
-.sound{
-    position: absolute;
-    width: 100%;
-    bottom: 0px;
+.caption p{
+    font-size: 2rem;
 }
 /*コンテンツ内imgタグ*/
-.imgPart img{
-    /*max-width:100%;
-    max-height: 100%;*/
-    object-fit:cover;
-    width: 200px;
-    height: 200px;
+.imgPart img, .imgPart_alt img{
+    max-width:100%;
+    max-height: 100%;
     outline: 2px solid rgb(0, 0, 0);
     /*margin: -10px;*/
     /*box-shadow: 左右の向きpx  上下の向きpx ぼかしpx 広がりpx 色 内側指定;
@@ -199,7 +209,7 @@ a:hover {
     /*アニメ―ション*/
     transition: 0.1s;
 }
-.photoList img:hover{
+.newsList img:hover{
     outline: 4px solid rgb(0, 0, 0);
     transform: scale(1.02);
 }
@@ -248,7 +258,8 @@ a:hover {
                             supported by Chrome and Opera */
 }
 /*ポップアップ内写真*/
-#popUpVideo{
+#popUpImg{
+    object-fit: contain;
     width: 100%;
     height: 100%;
 }

@@ -1,6 +1,7 @@
 /*共通*/
 body{
     font-family: serif;
+    background-color: #eae1cf;
 }
 /*ロード画面*/
 #loadground{
@@ -11,6 +12,7 @@ body{
   position: fixed;
   transition: 0.3s;
   text-align: center;
+  cursor: wait;
 }
 #_x32_{
   margin-top: 35vh;
@@ -47,9 +49,19 @@ body{
     opacity: 0;
   }
 }
+/*背景アニメ―ション*/
+#particles-js{
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  z-index: -1;
+}
 /*ヘッダー*/
 #fixedHeader{
     position: fixed;
+    z-index: 1;
 }
 #fixedHeader nav ul{
     display: flex;
@@ -67,8 +79,8 @@ body{
     transition: 0.3s;
 }
   #menuIcon img:hover{
-    box-shadow: 0 0 10px rgb(60, 60, 60);
-    transform: scale(1.05);
+    box-shadow: 0 0 20px rgb(60, 60, 60);
+  /* transform: scale(1.05); */
 }
 li div{
     padding: 0.5rem 1rem 0.5rem 1rem;
@@ -130,9 +142,6 @@ a:hover {
 }
 
 /*コンテンツ*/
-#thisContents{
-    background-color: rgb(109,158,147);
-}
 /*コンテンツ内ulタグ*/
 #photoUl{
     box-shadow: 0 0 30px rgb(60, 60, 60);

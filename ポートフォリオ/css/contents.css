@@ -13,6 +13,7 @@ body{
   position: fixed;
   transition: 0.3s;
   text-align: center;
+  cursor: wait;
 }
 #_x32_{
   margin-top: 35vh;
@@ -49,9 +50,15 @@ body{
     opacity: 0;
   }
 }
-
-
-
+/*背景アニメ―ション*/
+#particles-js{
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  z-index: -1;
+}
 /*rowクラス*/
 .row{
   margin: 0;
@@ -59,6 +66,7 @@ body{
 /*ヘッダー*/
 #fixedHeader{
   position: fixed;
+  z-index: 1;
 }
 ul{
   display: flex;
@@ -72,8 +80,8 @@ ul{
   transition: 0.3s;
 }
 #menuIcon img:hover{
-  box-shadow: 0 0 10px rgb(60, 60, 60);
-  transform: scale(1.05);
+  box-shadow: 0 0 20px rgb(60, 60, 60);
+  /* transform: scale(1.05); */
 }
 .liDiv{
   padding: 0.5rem 1rem 0.5rem 1rem;
@@ -109,24 +117,67 @@ a:hover {
   width: 100%;/*hover時に表示*/
   }
 /*コンテンツ*/
+.titlePart{
+  position: absolute;
+  right: 85%;
+  writing-mode: tb-rl ;
+  font-size: 5rem;
+  color: rgb(0,0,0);
+  text-shadow: 3px 3px #fff, 4px 4px 0 #5d6f77, 4px 2px 0 #5d6f77, 2px 4px 0 #5d6f77, 2px 2px 0 #5d6f77;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  cursor: pointer;
+}
+.titlePart_alter{
+  position: absolute;
+  left: 85%;
+  writing-mode: tb-rl ;
+  font-size: 5rem;
+  color: rgb(0,0,0);
+  text-shadow: 3px 3px #fff, 4px 4px 0 #5d6f77, 4px 2px 0 #5d6f77, 2px 4px 0 #5d6f77, 2px 2px 0 #5d6f77;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  cursor: pointer;
+}
+.titlePart:hover, .titlePart_alter:hover{
+  color: rgb(50,50,50);
+  text-shadow: 8px 8px #fff, 9px 9px 0 #5d6f77, 9px 7px 0 #5d6f77, 7px 9px 0 #5d6f77, 7px 7px 0 #5d6f77;
+  letter-spacing: 2rem;
+}
 .areaContainer{
+  position: relative;
   margin-left: auto;
   margin-right: 0px;
   box-shadow: 0 0 10px rgb(60, 60, 60);
+  background-color: rgba(150,150,150,0.1);
+}
+.areaContainer_alter{
+  position: relative;
+  margin-left: 0px;
+  margin-right: auto;
+  box-shadow: 0 0 10px rgb(60, 60, 60);
+  background-color: rgba(150,150,150,0.1);
 }
 /*ABOUT*/
 #aboutArea{
-  background-image: url('../img/photo/nature/index_1.jpg');
+  background-image: url('../img/about/index_1.jpg');
   background-size: cover;
   color: white;
+}
+#aboutCaption{
+  position: absolute;
+  width: 40%;
+  top: 10%;
+  right: 10%;
+  box-shadow: 0 0 20px rgb(60, 60, 60);
 }
 #toAbout{
   width: auto;
   height: auto;
   padding: 0px;
   position: absolute;
-  bottom: 5%;
-  left: 25%;
+  bottom: 10%;
+  left: 5%;
   /* right: 70px;
   transition: 0.2s;
 }
@@ -134,17 +185,7 @@ a:hover {
   right: 60px; */
 }
 /*NEWS*/
-#newsArea{
-  background-color: rgba(0,0,0,0.1);
-  margin-left: 0px;
-  margin-right: auto;
-}
 /*PHOTO*/
-#photoArea{
-  background-color: rgba(0,0,0,0.1);
-  margin-left: auto;
-  margin-right: 0px;
-}
 .photoType{
   padding-left: 0px;
   padding-right: 0px;
@@ -186,12 +227,9 @@ a:hover {
   color: whitesmoke;
 }
 /*MUSIC*/
-#musicArea{
-  background-color: rgba(0,0,0,0.1);
-  margin-left: 0px;
-  margin-right: auto;
+#musicTitle{
+  left: 58%;
 }
-
 
 
 /*メモ*/

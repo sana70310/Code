@@ -26,6 +26,7 @@ var currentTypeIndex = 0; //typeListのインデックス
     tabWidth += photoTypeTabLi[i].offsetWidth;
   }
 
+  photoTypeTab.firstElementChild.style.width = tabWidth + photoTypeTabLi[0].offsetWidth + "px";
   photoTypeTab.style.paddingTop = headerHeight + "px";
   photoTypeTab.style.paddingLeft = (screenWidth - tabWidth)/2 - photoTypeTabLi[0].offsetWidth + "px";
 

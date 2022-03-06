@@ -22,8 +22,11 @@ var currentPath = "nature"; //写真のパス"../img/photo/"+ currentPath +"/ind
   let tabWidth = 0;
   for(let i=1; i<photoTypeTabLi.length; i++){
     tabWidth += photoTypeTabLi[i].offsetWidth;
+    console.log(photoTypeTabLi[i].offsetWidth);
   }
 
+  console.log(tabWidth);
+  photoTypeTab.firstElementChild.style.width = tabWidth + photoTypeTabLi[0].offsetWidth + 0.06 + "px";
   photoTypeTab.style.paddingTop = headerHeight + "px";
   photoTypeTab.style.paddingLeft = (screenWidth - tabWidth)/2 - photoTypeTabLi[0].offsetWidth + "px";
 

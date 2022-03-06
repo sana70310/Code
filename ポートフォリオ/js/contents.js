@@ -14,6 +14,11 @@ const headerHeight = document.getElementById("fixedHeader").offsetHeight; //ヘ�
 document.getElementById("contents").style.paddingTop = headerHeight +"px";
 //document.getElementById("contents").style.paddingLeft = screenWidth*0.19 +"px";
 
+//目次の表示位置
+document.getElementById("aboutTitle").style.top = headerHeight*2 +"px";
+document.getElementById("newsTitle").style.top = headerHeight*2 + screenWidth*0.81/3*2 + screenWidth*0.81/3/3*2 +"px";
+document.getElementById("photoTitle").style.top = headerHeight*2 + screenWidth*0.81/3*2*2 + screenWidth*0.81/3/3*2*2 +"px";
+document.getElementById("musicTitle").style.top = headerHeight*2 + screenWidth*0.81/3*2*3 + screenWidth*0.81/3/3*2*3 +"px";
 //各エリアの表示サイズ・位置設定
 //width, height
 aboutArea.style.width = screenWidth*0.81 +"px";
@@ -36,10 +41,10 @@ const backgroundLine_1 = headerHeight + aboutArea.offsetHeight + screenWidth*0.8
 const backgroundLine_2 = headerHeight + aboutArea.offsetHeight + newsArea.offsetHeight + screenWidth*0.81/3/3*2*2;
 const backgroundLine_3 = headerHeight + aboutArea.offsetHeight + newsArea.offsetHeight + photoArea.offsetHeight + screenWidth*0.81/3/3*2*2;
 //色
-const backgroundColor_1 = "rgb(25,25,25)";
-const backgroundColor_2 = "#cca";
-const backgroundColor_3 = "rgb(109,147,158)";
-const backgroundColor_4 = "#bbc";
+const backgroundColor_1 = "#debecc";
+const backgroundColor_2 = "#eae1cf";
+const backgroundColor_3 = "#bbbcde";
+const backgroundColor_4 = "#bed3ca";
 //初期化
 if(window.scrollY + screen.height/2<backgroundLine_1){
     document.body.style.backgroundColor = backgroundColor_1;

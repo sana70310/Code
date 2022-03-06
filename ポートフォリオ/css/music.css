@@ -1,7 +1,8 @@
 /*共通*/
 body{
     font-family: serif;
-    background-color: #bbc;
+    /* background-color: #bbc; */
+    background-color: #bed3ca;
 }
 /*ロード画面*/
 #loadground{
@@ -12,6 +13,7 @@ body{
   position: fixed;
   transition: 0.3s;
   text-align: center;
+  cursor: wait;
 }
 #_x32_{
   margin-top: 35vh;
@@ -48,9 +50,19 @@ body{
     opacity: 0;
   }
 }
+/*背景アニメ―ション*/
+#particles-js{
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  z-index: -1;
+}
 /*ヘッダー*/
 #fixedHeader{
     position: fixed;
+    z-index: 1;
 }
 #fixedHeader nav ul{
     display: flex;
@@ -67,9 +79,9 @@ body{
     border-radius: 50%;
     transition: 0.3s;
 }
-  #menuIcon img:hover{
-    box-shadow: 0 0 10px rgb(60, 60, 60);
-    transform: scale(1.05);
+#menuIcon img:hover{
+    box-shadow: 0 0 20px rgb(60, 60, 60);
+    /* transform: scale(1.05); */
 }
 li div{
     padding: 0.5rem 1rem 0.5rem 1rem;
@@ -131,9 +143,6 @@ a:hover {
 }
 
 /*コンテンツ*/
-#thisContents{
-    background-color: #bbc;
-}
 /*コンテンツ内ulタグ*/
 #photoUl{
     box-shadow: 0 0 30px rgb(60, 60, 60);
@@ -168,7 +177,7 @@ a:hover {
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: rgba(50,50,50,0.3);
+    /* background-color: rgba(50,50,50,0.3); */
     padding: 0px;
     box-shadow: 0 0 10px rgb(50,50,50);
 }
@@ -177,7 +186,7 @@ a:hover {
     width: 100%;
     top: 0px;
     padding: 1rem;
-    color: rgb(200,200,200);
+    color: rgb(0,0,0);
 }
 .sound{
     position: absolute;
