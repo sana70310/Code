@@ -71,16 +71,13 @@ canvas {
 #icon{
   position: absolute;
     object-fit:cover;
-    height: 50%;
-    top: 15%;
-    display: flex;
+    /* display: flex; */
     --animate-duration: 3s;
     box-shadow: 0 0 20px rgb(100, 100, 100);
     border-radius: 50%;
 }
 #toContents{
   position: absolute;
-  top: 70%;
   font-size: 2rem;
   padding: 0.2rem 0.3rem;
   border: solid 2px white;
